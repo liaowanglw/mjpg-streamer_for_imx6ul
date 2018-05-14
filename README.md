@@ -34,13 +34,13 @@
 可使用命令`grep gcc * -nIR`查看    
 * 2 `vim mjpg-streamer/plugins/input_uvc/Makefile`  
 修改:  
-`CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC `  
-为：
+`CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC`    
+为：  
 `CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_for_imx6ul/jpeg/include`  
 
 修改：  
-`(CC)(CFLAGS) -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS) `  
-为：  
+`(CC)(CFLAGS) -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)`    
+为：    
 `(CC)(CFLAGS) -L /home/mjpg-streamer_for_imx6ul/jpeg/lib -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS) `
 
 
