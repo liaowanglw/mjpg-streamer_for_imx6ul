@@ -63,7 +63,10 @@ CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_f
 `o: username:password.: disabled`  
 `o: commands..........: enabled`  
 在chrome或者firefox浏览器（不可使用IE）地址栏输入http://192.168.1.111:8080/?action=stream 就可以看到图像。  
-（注：192.168.1.111为目标板的ip地址，可以通过`ifconfig`查看）  
+（注：192.168.1.111为目标板的ip地址，可以通过`ifconfig`查看；  
+8080为端口地址，可以在-o命令后双引号内加入-p制定，例：将端口设为8090":  
+`./mjpg_streamer -i "./input_uvc.so -d /dev/video1" -o "./output_http.so -p 8090 -w ./www"`）  
+
 
 `
 
