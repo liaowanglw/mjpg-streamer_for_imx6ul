@@ -17,6 +17,6 @@
 
 ## 三 使用说明  
 ### 1 libjpeg动态库移植  
-``cd jped-8b  
+`` cd jped-8b  
 
 
