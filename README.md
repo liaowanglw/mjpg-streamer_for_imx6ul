@@ -5,7 +5,7 @@
 主机环境:ubuntu 18.04 LTS   
 目标机:NXP i.MX6UL（FETMX6UL-C）需要连接上网络  
 目标机内核环境:3.14.38  
-交叉编译工具链:arm-fsl-linux-gnueabi-gcc 4.6.2  
+交叉编译工具链:arm-fsl-linux-gnueabi-gcc 4.6.2  
 摄像头：罗技C270  
 
 ---  
