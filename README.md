@@ -45,6 +45,28 @@ CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_f
 (CC)(CFLAGS) -L /home/mjpg-streamer_for_imx6ul/jpeg/lib -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)  
 （注：/home/mjpg-streamer_for_imx6ul/jpeg为jpeg-8b编译安装后自定义的路径）  
 
+* 3 编译  
+`make`  
+编译成功后会生成mjpg_streamer、input*.so、output*.so等文件。  
+
+* 4 将整个mjpg_streamer目录拷贝到目标板下。  
+
+---  
+### 3 测试  
+进入目标板的mjpg_streamer目录，使目标板连上网络。   
+连接上usb摄像头，使用`/dev/video*`查看设备号，一般为/dev/video1。  
+输入命令:`./mjpg_streamer -i "./input_uvc.so -d /dev/video1" -o "./output_http.so -w ./www"`  
+如果工作正常，摄像头工作指示灯亮起，终端上最终打印:  
+`o: www-folder-path...: ./www/`  
+`o: HTTP TCP port.....: 8080`  
+`o: username:password.: disabled`  
+`o: commands..........: enabled`  
+在chrome或者firefox浏览器（不可使用IE）地址栏输入http://192.168.1.111:8080/?action=stream 就可以看到图像。  
+（注：192.168.1.111为目标板的ip地址，可以通过`ifconfig`查看）  
+
+`
+
+
 
 
 
