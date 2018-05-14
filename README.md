@@ -17,7 +17,13 @@
 
 ## 三 使用说明  
 ### 1 libjpeg动态库移植  
+`cd mjpg-streamer_for_imx6ul`  
+`mkdir jpeg`(或自命名为其他名字其他路径)  
+
 `cd jped-8b`  
+`./configure --prefix=<路径>/jpeg --host=arm-linux`  
+`make`  
+`make install`  
 
 
 
