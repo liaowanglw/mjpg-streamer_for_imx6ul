@@ -2,7 +2,7 @@
 ---  
 
 ## 一 环境  
-主机环境:ubuntu 18.04  
+主机环境:ubuntu 18.04 LTS   
 目标机:NXP i.MX6UL（FETMX6UL-C）  
 目标机内核环境:3.14.38  
 交叉编译工具链:arm-fsl-linux-gnueabi-gcc 4.6.2  
@@ -23,7 +23,13 @@
 `cd jped-8b`  
 `./configure --prefix=<路径>/jpeg --host=arm-linux`  
 `make`  
-`make install`  
+`make install`  
+编译安装后在jpeg目录下会生成bin、include、lib、share四个目录。  
+拷贝lib目录下的文件到目标板的/lib目录下。  
+
+---
+### 2 移植mjpg-streamer  
+
 
 
 
