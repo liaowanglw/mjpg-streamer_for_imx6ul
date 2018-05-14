@@ -2,7 +2,7 @@
 ---  
 
 # 一 环境  
-主机环境:ubuntu 18.04
+主机环境:ubuntu 18.04  
 目标机:NXP i.MX6UL（FETMX6UL-C）  
 目标机内核环境:3.14.38  
 交叉编译工具链:arm-fsl-linux-gnueabi-gcc 4.6.2  
