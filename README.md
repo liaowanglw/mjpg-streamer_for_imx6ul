@@ -63,7 +63,7 @@ CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_f
 `o: HTTP TCP port.....: 8080`  
 `o: username:password.: disabled`  
 `o: commands..........: enabled`  
-在chrome或者firefox浏览器（不可使用IE）地址栏输入http://192.168.1.111:8080/?action=stream 就可以看到图像。  
+在chrome或者firefox浏览器（不可使用IE）地址栏输入`http://192.168.1.111:8080/?action=stream`就可以看到图像。  
 
 ---  
 
@@ -75,17 +75,17 @@ CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_f
 默认有以下分辨率：  
 QQVGA：160x120  
 QCIF：176x144  
-CGA：320x200  
-QVGA ：320x240 
-CIF：352x288 
-PAL：720x576 
-VGA：640x480 
-SVGA：800x600 
-XGA：1024x768 
-HD：1280x720 
-SXGA：1280x1024 
-UXGA：1600x1200 
-FHD：1920x1280 
+CGA：320x200  
+QVGA ：320x240  
+CIF：352x288  
+PAL：720x576  
+VGA：640x480  
+SVGA：800x600  
+XGA：1024x768  
+HD：1280x720  
+SXGA：1280x1024  
+UXGA：1600x1200  
+FHD：1920x1280  
 例：将输入分辨率改为HD：  
 `./mjpg_streamer -i "./input_uvc.so -d /dev/video1 -r HD" -o "./output_http.so -w ./www“`  
 或者直接输入需要的分辨率，例如将输入分辨率改为320x240：  
@@ -97,7 +97,7 @@ FHD：1920x1280 
 ### 注：以上为在同一局域网内查看输出视频，如需外网查看，自行检索端口转发相关内容对路由器进行设置。  
 ### 如需要查看截屏，则在浏览器地址的action=后将stream改为snapshot：  
 #### 例：  
-#### http://192.168.1.111:8080/?action=snapshot
+#### `http://192.168.1.111:8080/?action=snapshot`
 
 
 `
