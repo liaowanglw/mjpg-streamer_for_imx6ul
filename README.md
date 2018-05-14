@@ -11,7 +11,7 @@
 ---  
 
 ## 二 目录说明  
-* 1 jpeg-8b:libjpeg库  
+* 1 jpeg-8b：libjpeg库  
 * 2 mjpg-streamer：mjpg-streamer主目录  
 
 ---  
