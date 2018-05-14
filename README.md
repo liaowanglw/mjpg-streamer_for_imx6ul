@@ -3,11 +3,11 @@
 
 ## 一 环境  
 主机环境:ubuntu 18.04 LTS   
-目标机:NXP i.MX6UL（FETMX6UL-C）  
-目标机内核环境:3.14.38  
-交叉编译工具链:arm-fsl-linux-gnueabi-gcc 4.6.2  
+目标机:NXP i.MX6UL（FETMX6UL-C）需要上网络  
+连接目标机内核环境:3.14.38  
+交叉编译工具链:arm-fsl-linux-gnueabi-gcc 4.6.2  
 
----  
+---  
 
 ## 二 目录说明  
 * 1 jpeg-8b:libjpeg库  
@@ -84,15 +84,15 @@ XGA    1024*768
 HD     1280*720  
 SXGA   1280*1024  
 UXGA   1600*1200  
-FHD    1920*1280  
-例：将输入分辨率改为HD：
-`./mjpg_streamer -i "./input_uvc.so -d /dev/video1 -r HD" -o "./output_http.so -w ./www`  
+FHD    1920*1280  
+例：将输入分辨率改为HD：  
+`./mjpg_streamer -i "./input_uvc.so -d /dev/video1 -r HD" -o "./output_http.so -w ./www`  
 或者直接输入需要的分辨率，例如将输入分辨率改为320x240：  
 `./mjpg_streamer -i "./input_uvc.so -d /dev/video1 -r 320x240" -o "./output_http.so -w ./www`   
   
 更多设置和指令可以输入`./mjpg_streamer --help`或者在start.sh中查看。  
 
----  
+---  
 注：以上为在同一局域网内查看输出视频，如需外网查看，自行检索端口转发相关内容对路由器进行设置。
 
 
