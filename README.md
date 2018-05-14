@@ -24,11 +24,14 @@
 `./configure --prefix=<路径>/jpeg --host=arm-linux`  
 `make`  
 `make install`  
-编译安装后在jpeg目录下会生成bin、include、lib、share四个目录。    
+编译安装后在jpeg目录下会生成bin、include、lib、share四个目录。  
 拷贝lib目录下的文件到目标板的/lib目录下。  
 
 ---
 ### 2 移植mjpg-streamer  
+`cd mjpg-streamer`  
+将源码顶层及plugins目录下所有子层目录的Makefile中的`CC = gcc`改为`CC= arm-fsl-linux-gnueabi-gcc`  
+
 
 
 
