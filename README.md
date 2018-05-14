@@ -35,14 +35,14 @@
 * 2 修改plugins/input_uvc下的Makefile文件  
 `vim mjpg-streamer/plugins/input_uvc/Makefile`  
 修改:  
-`CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC`  
+CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC  
 为：  
-`CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_for_imx6ul/jpeg/include`  
+CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_for_imx6ul/jpeg/include  
 
 修改：  
-`(CC)(CFLAGS) -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)`  
+(CC)(CFLAGS) -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)  
 为：  
-`(CC)(CFLAGS) -L /home/mjpg-streamer_for_imx6ul/jpeg/lib -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)`  
+(CC)(CFLAGS) -L /home/mjpg-streamer_for_imx6ul/jpeg/lib -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)  
 （注：/home/mjpg-streamer_for_imx6ul/jpeg为jpeg-8b编译安装后自定义的路径）  
 
 
