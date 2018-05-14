@@ -63,9 +63,37 @@ CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_f
 `o: username:password.: disabled`  
 `o: commands..........: enabled`  
 在chrome或者firefox浏览器（不可使用IE）地址栏输入http://192.168.1.111:8080/?action=stream 就可以看到图像。  
-（注：192.168.1.111为目标板的ip地址，可以通过`ifconfig`查看；  
-8080为端口地址，可以在-o命令后双引号内加入-p制定，例：将端口设为8090":  
-`./mjpg_streamer -i "./input_uvc.so -d /dev/video1" -o "./output_http.so -p 8090 -w ./www"`）  
+
+---  
+
+### 4 附注  
+* 1 192.168.1.111为目标板的ip地址，可以通过`ifconfig`查看；  
+* 2 8080为端口地址，可以在`-o`命令后双引号内加入`-p`制定，例：将端口设为8090:  
+`./mjpg_streamer -i "./input_uvc.so -d /dev/video1" -o "./output_http.so -p 8090 -w ./www"`  
+* 3 如果需要修改输出的分辨率，可以在`-i`命令后的双引号内加入`-r`制定，  
+默认有以下分辨率：  
+QQVGA  160*120  
+QCIF   176*144  
+CGA    320*200  
+QVGA   320*240  
+CIF    352*288  
+PAL    720*576  
+VGA    640*480  
+SVGA   800*600  
+XGA    1024*768  
+HD     1280*720  
+SXGA   1280*1024  
+UXGA   1600*1200  
+FHD    1920*1280  
+例：将输入分辨率改为HD：
+`./mjpg_streamer -i "./input_uvc.so -d /dev/video1 -r HD" -o "./output_http.so -w ./www`  
+或者直接输入需要的分辨率，例如将输入分辨率改为320x240：  
+`./mjpg_streamer -i "./input_uvc.so -d /dev/video1 -r 320x240" -o "./output_http.so -w ./www`   
+  
+更多设置和指令可以输入`./mjpg_streamer --help`或者在start.sh中查看。  
+
+---  
+注：以上为在同一局域网内查看输出视频，如需外网查看，自行检索端口转发相关内容对路由器进行设置。
 
 
 `
