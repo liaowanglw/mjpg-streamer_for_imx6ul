@@ -42,7 +42,7 @@
 修改：  
 `(CC)(CFLAGS) -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)`  
 为：  
-`(CC)(CFLAGS) -L /home/mjpg-streamer_for_imx6ul/jpeg/lib -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)`  
+`(CC)(CFLAGS) -L /home/mjpg-streamer_for_imx6ul/jpeg/lib -o @inputuvc.cv4l2uvc.lojpegutils.lodynctrl.lo(LFLAGS)`  
 （注：/home/mjpg-streamer_for_imx6ul/jpeg为jpeg-8b编译安装后自定义的路径）  
 
 
