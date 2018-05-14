@@ -74,18 +74,18 @@ CFLAGS += -O1 -DLINUX -D_GNU_SOURCE -Wall -shared -fPIC -I /home/mjpg-streamer_f
 * 3 如果需要修改输出的分辨率，可以在`-i`命令后的双引号内加入`-r`制定，  
 默认有以下分辨率：  
 QQVGA：160x120  
-QCIF：176x144  
+QCIF：176x144  
 CGA：320x200  
-QVGA ：320x240  
-CIF：352x288  
-PAL：720x576  
-VGA：640x480  
-SVGA：800x600  
-XGA：1024x768  
-HD：1280x720  
-SXGA：1280x1024  
-UXGA：1600x1200  
-FHD：1920x1280  
+QVGA ：320x240 
+CIF：352x288 
+PAL：720x576 
+VGA：640x480 
+SVGA：800x600 
+XGA：1024x768 
+HD：1280x720 
+SXGA：1280x1024 
+UXGA：1600x1200 
+FHD：1920x1280 
 例：将输入分辨率改为HD：  
 `./mjpg_streamer -i "./input_uvc.so -d /dev/video1 -r HD" -o "./output_http.so -w ./www“`  
 或者直接输入需要的分辨率，例如将输入分辨率改为320x240：  
