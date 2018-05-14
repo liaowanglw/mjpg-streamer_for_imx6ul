@@ -23,7 +23,7 @@
 `cd jped-8b`  
 `./configure --prefix=<路径>/jpeg --host=arm-linux`  
 `make`  
-`make install`  
+`make install`  
 编译安装后在jpeg目录下会生成bin、include、lib、share四个目录。  
 拷贝lib目录下的文件到目标板的/lib目录下。  
 
